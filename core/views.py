@@ -19,7 +19,7 @@ class LoginView(FormView):
     """login view"""
 
     form_class = forms.LoginForm
-    success_url = reverse_lazy('index')
+    success_url = reverse_lazy('user_profile')
     template_name = 'home.html'
 
     def form_valid(self, form):
@@ -60,5 +60,7 @@ def index(request):
     return render(request,'trial.html')
 def Profile(request):
     return render(request,'profile.html')
+def navbar(request):
+    return render(request,'navbar.html')
 
 
