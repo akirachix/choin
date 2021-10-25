@@ -68,3 +68,6 @@ def profile_upload(request):
     
 
     return render(request, template, context)
+
+def reward(request):
+    return render(request,'reward.html')
