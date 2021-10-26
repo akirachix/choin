@@ -1,0 +1,100 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{%  static  'redeem.css'  %}">
+
+</head>
+
+<body>
+    <div id="left">
+        <img src="http://cdn7.dissolve.com/p/D1307_90_007/D1307_90_007_0004_600.jpg" alt="" id="img2">
+        <h2>balance : 20 choins</h2>
+    </div>
+    <div class="container">
+        <h1 id="heading">Redeems</h1>
+        <main class="grid">
+            <article>
+                <img src="{% static 'images/coffee.jpeg' %}" alt="" id="coffee">
+                <div class="text">
+                    <p> Coffee<button> + </button>1 <button> - </button></p>
+
+                    <!-- <p> Coffee<span href="#" id="plus"> + </span>1 <span id="minus">- </span></p> -->
+                    <h1>20choins</h1>
+
+                </div>
+            </article>
+            <article>
+                <img src="{% static 'images/Pizza.jpeg' %}" alt="">
+                <div class="text">
+                    <p>Pizza<button> + </button>1 <button> - </button></p>
+                    <h1>50choins</h1>
+
+                </div>
+            </article>
+            <article>
+                <img src="{% static 'images/cupcake.jpeg' %}" alt="" id="cake">
+                <div class="text">
+                    <p> Cakes<button> + </button>1 <button> - </button></p>
+                    <h1>15choins</h1>
+                </div>
+            </article>
+        </main>
+        <main class="grid">
+            <article>
+                <img src="{% static 'images/colacola.jpeg' %}" alt="">
+                <div class="text">
+                    <p>Soda<button> + </button>1 <button> - </button></p>
+                    <h1>20choins</h1>
+                </div>
+            </article>
+            <article>
+                <img src="{% static 'images/laptop.jpeg' %}" alt="">
+                <div class="text">
+                    <p>Laptop<button id="lap"> + </button>1 <button> - </button></p>
+
+                    <h1>200choins</h1>
+                </div>
+            </article>
+            <article>
+                <img src="{% static 'images/KFC.jpg' %}" alt="">
+                <div class="text">
+                    <p>KFC<button> + </button>1 <button> - </button></p>
+                    <h1>100choins</h1>
+                </div>
+            </article>
+        </main>
+    </div>
+    <style>
+        button {
+            background-color: black;
+            color: white;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 16px;
+            margin-right: 16px;
+        }
+        
+        #lap {
+            background-color: black;
+            color: white;
+            border-radius: 50%;
+            font-size: 20px;
+            font-weight: bold;
+            margin-left: 14px;
+            margin-right: 16px;
+        }
+        
+        body {
+            background-color: white;
+        }
+    </style>
+</body>
+
+</html>

@@ -1,0 +1,150 @@
+                body {
+                    background-color: white;
+                }
+                
+                .grid {
+                    margin: 80px;
+                    display: grid;
+                    grid-template-columns: repeat(3, 1fr);
+                    grid-gap: 30px;
+                    align-items: center;
+                    margin-top: 0;
+                }
+                
+                img {
+                    width: 40%;
+                    height: 40%;
+                }
+                
+                #coffee {
+                    height: 180px;
+                }
+                
+                #img2 {
+                    border-radius: 50%;
+                    width: 60px;
+                    height: 80px;
+                    margin-top: 0;
+                    margin-left: 80%;
+                }
+                
+                h2 {
+                    margin-left: 70%;
+                    color: purple;
+                }
+                
+                span {
+                    background-color: black;
+                    font-size: 25px;
+                    border-radius: 50%;
+                    color: white;
+                    cursor: pointer;
+                    margin-left: 10px;
+                    margin-right: 20px;
+                }
+                
+                .container {
+                    margin-left: 20%;
+                }
+                
+                #minus {
+                    font-size: 30px;
+                    padding-left: 7px;
+                    padding-right: 6px;
+                }
+                
+                #plus {
+                    font-size: 30px;
+                    padding-left: 3px;
+                }
+                
+                #heading {
+                    margin-left: 9%;
+                }
+                
+                h1 {
+                    color: purple;
+                    margin-right: 120px;
+                }
+                
+                .grid>article {
+                    background-color: #eee5e9;
+                    border: none;
+                    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+                    border-radius: 20px;
+                    text-align: center;
+                    width: 250px;
+                    transition: transform .3s;
+                }
+                
+                .grid>article:hover {
+                    transform: translateY(5px);
+                    box-shadow: 2px 2px 26px 0px rgba(0, 0, 0, 0.3);
+                }
+                
+                .grid>article img {
+                    width: 100%;
+                    border-top-left-radius: 20px;
+                    border-top-right-radius: 20px;
+                }
+                
+                #cake {
+                    height: 190px;
+                }
+                
+                .text {
+                    padding: 0 20px 20px;
+                }
+                
+                @media(max-width:768px) {
+                    .grid {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                }
+                
+                @media(max-width:500px) {
+                    .grid {
+                        grid-template-columns: repeat(1, 1fr);
+                    }
+                    .grid>article {
+                        text-align: center;
+                    }
+                }
+                
+                p {
+                    margin-right: 40px;
+                }
+                
+                #laptop {
+                    height: 40px;
+                }
+                
+                button {
+                    background-color: black;
+                    color: white;
+                    border-radius: 50%;
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-left: 16px;
+                    margin-right: 16px;
+                }
+                
+                button {
+                    background-color: black;
+                    color: white;
+                    border-radius: 50%;
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-left: 16px;
+                    margin-right: 16px;
+                }
+                
+                #lap {
+                    background-color: black;
+                    color: white;
+                    border-radius: 50%;
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-left: 14px;
+                    margin-right: 16px;
+                }
