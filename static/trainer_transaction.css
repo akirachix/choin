@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+/* syling the title transaction */
+#transaction {
+    margin-bottom: 0;
+    margin-left: 27%;
+    color: purple;
+    margin-bottom: 10px;
+}
+#profile-image{
+    border-radius: 50%;
+    margin-left: 90%;
+    width: 55px;
+    height: 70px;
+}
+#heading {
+    margin-left: 87%;
+    margin-bottom: 0;
+    font-family:'Montserrat', sans-serif;
+    color: purple;
+
+}
+/* //syling the table */
+table{
+    width: 900px;
+    margin-left: 25%;
+    margin-top: 8%;
+    margin-bottom: 8%;
+    border-collapse: collapse;
+
+}
+th, caption{
+    text-align: left;
+    color:purple;
+    font-weight: lighter;
+    font-size: 20px;
+
+}
+
+th, td{
+    padding-left: 60px;
+    font-family: 'Poppins', sans-serif;
+    
+
+}
+tr:nth-child(even){
+    background-color:#c4c4c4;
+    opacity: 61%;
+}
+tr:nth-child(odd){
+    background-color:#DCBEEB;
+    opacity: 35%;
+}

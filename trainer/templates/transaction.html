@@ -1,0 +1,66 @@
+{% include 'student_navbar.html' %}{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{% static 'trainer_transaction.css' %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="http://cdn7.dissolve.com/p/D1307_90_007/D1307_90_007_0004_600.jpg" alt="" id="profile-image">
+    <h3 id="heading">Balance:0Choins</h3>
+    <h2 id="redeem">Choin Transaction</h2>
+    <div class="table">
+        <table>
+            <tr>
+                <th>Date</th>
+                <th> Receipient</th>
+                <th>Reason</th>
+                <th>Choin</th>
+                
+    
+            </tr>
+       
+       
+        <tr>
+        <td>30/9/2021
+        </td>
+        <td>Eunice Atieno</td>
+        <td>Best in Assesment</td>
+        <td>20</td>
+       
+    
+        </tr>
+        <tr>
+            <td>30/9/2021
+            </td>
+            <td>Hunter Achieng</td>
+            <td>Managing Students</td>
+            <td>50</td>
+           
+        
+            </tr>
+       
+    </table>
+    </div>
+    <div class="pagination">
+        <span class="step-links">
+            {% if students.has_previous %}
+                <a id="previous" class="btn btn-outline-dark mb-2 " href="?page=1">First Page</a>
+                <a id="previous" class="btn btn-outline-dark mb-2 " href="?page={{ students.previous_page_number }}"><i class="fas fa-backward"></i>Previous</a>
+            {% endif %}
+            {% if students.has_next %}
+                <a  id="last_page" class="btn btn-outline-dark mb-2" href="?page={{ students.next_page_number }}"><i class="fas fa-forward"></i>Next</a>
+                <a id="last_page" class="btn btn-outline-dark mb-2 ml-10" href="?page={{ students.paginator.num_pages }}">Last Page</a>
+            {% endif %}
+        </span>
+      </div>
+
+
+</body>
+
+</html>
