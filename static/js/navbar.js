@@ -11,6 +11,7 @@ closeMenu.addEventListener("click", function(){
 
 
 //active nav
+var currentLocation = location.href;
 
 var sidebarContainer = document.getElementById("navItems");                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 
@@ -19,9 +20,11 @@ var navItems = sidebarContainer.getElementsByClassName("nav");
 var navLength = navItems.length;
 
 for(let i = 0; i< navLength; i++ ){
-    navItems[i].addEventListener("click", function(){
-        var activeNav = document.getElementsByClassName("active");
-        activeNav[0].className = activeNav[0].className.replace(" active", "");
-        this.className+= " active";
-    })
+  if(navItems[i].href === currentLocation){
+    navItems[i].className += " active"
+  }
 }
+// navItems[i].addEventListener("click", function(){
+        
+
+// })

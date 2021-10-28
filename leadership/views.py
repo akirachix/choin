@@ -1,8 +1,10 @@
 import csv, io
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.contrib import messages
-from .models import *
 
+from leadership.forms import AddMetricsForm
+from .models import *
+from django.core.paginator import Paginator
 from RewardSystem.settings import EMAIL_HOST_USER
 from django.core import mail
 from django.core.mail import send_mail
@@ -77,3 +79,26 @@ def reward(request):
 def reward_confirm(request):
     metrics = Metrics.objects.all()
     return render(request,'reward_confirm.html',{'metrics':metrics})
+
+def addMetric(request):
+    metrics_list = Metrics.objects.all()
+    paginator = Paginator(metrics_list, 6)
+    page = request.GET.get('page')
+    metrics = paginator.get_page(page)
+
+   
+   
+    if request.method == "POST":
+        form = AddMetricsForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('metrics')
+            
+        else:
+            print(form.errors)
+    else:
+        form = AddMetricsForm()
+    return render(request,'metrics.html',{'form':form,'metrics':metrics})
+
+
+    
