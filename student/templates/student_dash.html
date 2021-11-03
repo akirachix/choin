@@ -1,0 +1,121 @@
+{% load static %} {% include 'student_navbar.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'student_dash.css' %}">
+    <title>Choin</title>
+</head>
+
+<body>
+    <!-- <h1 id="">Home</h1> -->
+    <div id="prof">
+        <img id="profile" src="/static/images/me-removebg-preview.png" />
+        <h2>Balance: 20choins</h2>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="column">
+            <h1>profile</h1>
+            <div class="card">
+                <img id="profile" src="/static/images/me-removebg-preview.png" />
+                <h3>Chantal Niyonkuru</h3>
+                <p>300Choins</p>
+                <p>Rewarded</p>
+            </div>
+        </div>
+        <div class="column">
+            <table>
+                <th>Latest transactions</th>
+                <tr>
+                    <th>Date
+                    </th>
+                    <th>Type</th>
+                    <th>Total Choins</th>
+                </tr>
+                <tr>
+                    <td>10/10/2022</td>
+                    <td>Redeemed</td>
+                    <td>200</td>
+                </tr>
+                <tr>
+                    <td>11/10/2022</td>
+                    <td>Rewarded</td>
+                    <td>190</td>
+                </tr>
+                <tr>
+                    <td>18/10/2022</td>
+                    <td>Rewarded</td>
+                    <td>70</td>
+                </tr>
+                <tr>
+                    <td>21/10/2022</td>
+                    <td>Redeemed</td>
+                    <td>98</td>
+                </tr>
+                <tr>
+                    <td>21/10/2022</td>
+                    <td>Redeemed</td>
+                    <td>80</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <img src="{% static 'images/coffee.jpeg' %}" alt="" id="coffee">
+                <p>Coffee cub</p>
+                <img src="{% static 'images/coffee.jpeg' %}" alt="" id="coffee">
+
+                <p>Coffee cub</p>
+            </div>
+        </div>
+        <div class="column">
+            <table>
+                <th>Leaderboard</th>
+                <tr>
+                    <th>Image
+                    </th>
+                    <th> Name</th>
+                    <th>Choins</th>
+
+
+                </tr>
+                <tr>
+                    <td><img id="Image" src="/static/images/me-removebg-preview.png" />
+                    </td>
+                    <td>Eunice Atieno</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td><img id="Image" src="/static/images/me-removebg-preview.png" />
+                    </td>
+                    <td>Marie Chantal</td>
+                    <td>98</td>
+                </tr>
+                <tr>
+                    <td><img id="Image" src="/static/images/me-removebg-preview.png" />
+                    </td>
+                    <td>Shadya Obya</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td><img id="Image" src="/static/images/me-removebg-preview.png" />
+                    </td>
+                    <td>Hunter Achieng</td>
+                    <td>98</td>
+                </tr>
+                <tr>
+                    <td><img id="Image" src="/static/images/me-removebg-preview.png" />
+                    </td>
+                    <td>Eunice Atieno</td>
+                    <td>100</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+
+</html>

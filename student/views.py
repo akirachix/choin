@@ -38,3 +38,7 @@ def student_home(request):
 
 def redeem(request):
     return render(request,'redeem.html')
+def redeem_(request):
+    return render(request,'redeem.html')
+def student_dashboard(request):
+    return render(request,'student_dash.html')
