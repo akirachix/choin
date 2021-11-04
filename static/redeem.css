@@ -95,3 +95,9 @@ h3 {
     color: purple;
     margin-bottom: 10px;
 }
+
+input {
+    background-color: white;
+    border: 1px solid white;
+    width: 70px;
+}
