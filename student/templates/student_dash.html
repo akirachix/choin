@@ -1,0 +1,140 @@
+{% load static %} {% include 'student_navbar.html' %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'student_dash.css' %}">
+    <title>Choin</title>
+</head>
+
+<body>
+    <div class="profile_details">
+        <img id="profile" src="/static/images/me-removebg-preview.png" />
+        <p>Balance:20Choins</p>
+    </div>
+    <h2 id="prof_det">Profile details</h2>
+    <hr>
+    <div class="row">
+        <div class="column">
+            <h3 id="prof_title">Profile</h3>
+            <div class="card">
+                <img src="/static/images/me-removebg-preview.png" id="Imag" alt="">
+                <p id="prof">Eunice Otieno</p>
+                <p id="prof">My choin balance</p>
+                <p id="prof">300choins</p>
+                <p id="prof">Rewarded</p>
+            </div>
+        </div>
+        <div class="column" id="table">
+            <h3 id="head3">Latest transactions</h3>
+
+            <table>
+
+                <th>Date
+                </th>
+                <th>Type</th>
+                <th>Total choins</th>
+                </tr>
+                <tr>
+                    {% for t in transactions %}
+                    <tr>
+
+                        <td>{{ t.time}} </td>
+                        <td>Redeemed</td>
+                        <td>{{ t.value}} </td>
+                    </tr>
+                    {% endfor %}
+                    <!-- <tr>
+                <td>10/10/2021</td>
+                <td>Rewarded</td>
+                <td>20</td>
+            </tr>
+            <tr> -->
+                    <td>12/10/2021</td>
+                    <td>Redeemed</td>
+                    <td>40</td>
+                </tr>
+                <tr>
+                    <td>13/10/021</td>
+                    <td>Rewarded</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td>19/10/021</td>
+                    <td>Rewarded</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>17/10/021</td>
+                    <td>Redeemed</td>
+                    <td>11</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="column">
+            <h3 id="prof_title">Latest redeem</h3>
+
+            <div class="card">
+                <div class="row">
+                    <div class="column">
+                        {%for item in reward_items%} {{item.image.url}}>
+                        <br> {{item.item_name}} </div>
+                    <div class="column">
+                        {{item.image.url}}><br> {{item.item_name}} {%endfor%}
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="column">
+            <table>
+                <h3 id="head3">Leaderboard
+                </h3>
+                <tr>
+                    <th>Image
+                    </th>
+                    <th> Name</th>
+                    <th>Choins</th>
+                </tr>
+                <tr>
+                    <td><img id="Image" src="/static/images/me-removebg-preview.png" />
+                    </td>
+                    <td>Eunice</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td><img id="Image" src="/static/images/me-removebg-preview.png" />
+                    </td>
+                    <td>Chantal</td>
+                    <td>98</td>
+                </tr>
+                <tr>
+                    <td><img id="Image" src="/static/images/me-removebg-preview.png" />
+                    </td>
+                    <td>Hunter</td>
+                    <td>100</td>
+                </tr>
+                <!-- <tr>
+                    <td><img id="Image" src="/static/images/me-removebg-preview.png" />
+                    </td>
+                    <td>Shadya</td>
+                    <td>98</td>
+                </tr> -->
+                <tr>
+                    <td><img id="Image" src="/static/images/me-removebg-preview.png" />
+                    </td>
+                    <td>Sarah</td>
+                    <td>98</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

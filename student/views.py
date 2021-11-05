@@ -47,11 +47,10 @@ def redeem_success(request):
     return render(request,'RedeemSucceed.html')
 def redeem_active(request):
     return render(request,'redeem_active.html')
+def student_dashboard(request):
+    return render(request,'student_dash.html')
 
 def student_transactions(request):
     transactions = Transaction.objects.all().filter(receiver = request.user.username)
     bal = Wallet.objects.all().filter(owner = request.user)
-    
-    
-
     return render(request,'student_transactions.html',{'transactions':transactions,'bal':bal})         
