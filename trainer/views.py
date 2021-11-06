@@ -256,5 +256,8 @@ def trainer_profile(request):
         }
     return render(request, 'trainer_profile.html', args)
 
+def trainer_dashboard(request):
+    return render(request,'trainer_dashboard.html')
+
 
 
