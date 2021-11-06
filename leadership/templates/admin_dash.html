@@ -1,13 +1,10 @@
-{% load static %}
-{% include 'leader_navbar.html' %}
+{% load static %} {% include 'leader_navbar.html' %}
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="{% static 'admin.css' %}">
-
-
     <title>Choin</title>
 </head>
 
@@ -15,15 +12,11 @@
     <img id="profile" src="/static/images/me-removebg-preview.png" />
     <h1 id="choin_available">Available Choins:2000</h1>
     <div class="card" id="upload_display">
-        <img id="codehive" src="/static/images/code-hive.png">
-        {% if messages %}
-        {% for message in messages %}
+        <img id="codehive" src="/static/images/code-hive.png"> {% if messages %} {% for message in messages %}
         <div>
             <strong id="msg">{{message|safe}}</strong>
         </div>
-        {% endfor %}
-        {% else %}
-        {{order}}
+        {% endfor %} {% else %} {{order}}
         <form action="" method="POST" enctype="multipart/form-data">
 
             {% csrf_token %}

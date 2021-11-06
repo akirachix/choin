@@ -17,5 +17,4 @@ urlpatterns =[
     path('search/',search_student,name='search_student'),
     path('add-reward-item/',add_reward,name='add-reward-item'),
     path('redeemable-items/', redeemableItemsList, name='redeemable-items'),
-
 ]
