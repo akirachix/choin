@@ -44,9 +44,11 @@
         <div class="column">
             <div class="card">
                 <img src="/static/images/me-removebg-preview.png" id="img" alt="">
-                <p id="prof">Eunice Atieno</p>
+                <p id="prof"> {{user.username}}</p>
                 <p id="prof">My choin balance</p>
-                <p id="prof">300Choin</p>
+                {% for b in bal %}
+
+                <p id="prof"></p>{{ b.choinBalance }}</p>
                 <p id="prof">Rewarded</p>
             </div>
         </div>
@@ -66,20 +68,34 @@
                     <td>11/10/2021
                     </td>
                     <td>Redeemed</td>
-                    <td>100</td>
+                    {% for b in bal %}
+
+                    <h3 id="heading">Balance:{{ b.choinBalance }}</h3>
+
+                    {% endfor %}
+
 
                 </tr>
                 <tr>
                     <td>12/10/2021
                     </td>
                     <td>Rewarded</td>
-                    <td>200</td>
+                    {% for b in bal %}
+
+                    <td>Balance:{{ b.choinBalance }}</td>
+
+                    {% endfor %}
+
                 </tr>
                 <tr>
                     <td>13/10/2021
                     </td>
                     <td>Rewarded</td>
-                    <td>250</td>
+                    {% for b in bal %}
+
+                    <td>{{ b.choinBalance }}
+                    </td> {% endfor %}
+
                 </tr>
                 <tr>
                     <td>14/10/2021
@@ -125,27 +141,45 @@
                 <tr>
                     <td><img id="Image" src="/static/images/me-removebg-preview.png" />
                     </td>
-                    <td>Eunice</td>
-                    <td>100</td>
+                    <td> {{user.username}}</td>
+                    {% for b in bal %}
+
+                    <td>{{ b.choinBalance }}</td>
+
+                    {% endfor %}
+
 
                 </tr>
                 <tr>
                     <td><img id="Image" src="/static/images/me-removebg-preview.png" />
                     </td>
-                    <td>Hunter</td>
-                    <td>100</td>
+                    <td> {{user.username}}</td>
+                    {% for b in bal %}
+
+                    <td>{{ b.choinBalance }}</td>
+
+                    {% endfor %}
                 </tr>
                 <tr>
                     <td><img id="Image" src="/static/images/me-removebg-preview.png" />
                     </td>
-                    <td>Chantal</td>
-                    <td>98</td>
+                    <td>{{user.username}}</td>
+                    {% for b in bal %}
+
+                    <td>{{ b.choinBalance }}</td>
+
+                    {% endfor %}
+
                 </tr>
                 <tr>
                     <td><img id="Image" src="/static/images/me-removebg-preview.png" />
                     </td>
-                    <td>Shadya</td>
-                    <td>99</td>
+                    <td>{{user.username}}</td>
+                    {% for b in bal %}
+
+                    <td>{{ b.choinBalance }}</td>
+
+                    {% endfor %}
                 </tr>
 
             </table>
