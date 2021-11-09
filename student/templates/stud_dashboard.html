@@ -46,7 +46,10 @@
                 <img src="/static/images/me-removebg-preview.png" id="img" alt="">
                 <p id="prof">Eunice Atieno</p>
                 <p id="prof">My choin balance</p>
-                <p id="prof">300Choin</p>
+                {% for b in bal %}
+                <p id="prof">{{ b.choinBalance }}</p>
+
+                {% endfor %}
                 <p id="prof">Rewarded</p>
             </div>
         </div>
@@ -85,7 +88,11 @@
                     <td>14/10/2021
                     </td>
                     <td>Redeemed</td>
-                    <td>200</td>
+                    {% for b in bal %}
+                    <td>{{ b.choinBalance }}</td>
+
+                    {% endfor %}
+
                 </tr>
 
             </table>
@@ -125,7 +132,7 @@
                 <tr>
                     <td><img id="Image" src="/static/images/me-removebg-preview.png" />
                     </td>
-                    <td>Eunice</td>
+                    <td>{{user.username}}</td>
                     <td>100</td>
 
                 </tr>
