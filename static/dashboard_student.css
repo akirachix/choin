@@ -65,7 +65,7 @@ h1 {
     margin: 0;
 }
 
-* {
+.column {
     box-sizing: border-box;
 }
 
@@ -88,7 +88,7 @@ h1 {
     border-radius: 8px;
     opacity: 80%;
     margin-left: 10px;
-    height: 85%;
+    height: 95%;
 }
 
 #prof {
