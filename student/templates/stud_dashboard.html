@@ -82,18 +82,35 @@
             <h3 id="proff">Latest redeem
             </h3>
             <div class="card-2">
-                {%for item in reward_items%}
+                
                 <div >
                     <div >
-                        <img id="image-reward" alt="redeemable-item" src="{{item.image.url}}">
-                        <h3>{{item.item_name}}</h3>
+                        <table>
+                            <th>Product</th>
+                            <th>Quantity</th>
+
+                            <th>Date</th>
+
+                         
+                            
+                            <tr>
+                                <td><img src="{{redeems.product.image.url}}" width="20px" alt=""></td>
+                               
+                                <td>
+                                    {{redeems.product}}      
+                                </td>
+                                <td>{{redeems.quantity}}  </td>
+                                <td>{{redeems.date}}  </td>
+
+                            </tr>
+                            
+
+                        </table>
+                       
                     </div>
-                    <div>
-                        <img id="image-reward" alt="redeemable-item" src="{{item.image.url}}">
-                        <h3>{{item.item_name}}</h3>
-                    </div>
+                
                 </div>
-                {%endfor%}
+               
             </div>
         </div>
         <div class="tab">
