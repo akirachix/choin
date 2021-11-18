@@ -342,12 +342,15 @@ h1 {
         margin: 0% 2%;
     }
     table {
+       
         width: 30%;
     }
     .column2>table {
+       
         width: 80%;
     }
     .column2{
         margin-left: 5%;
+       
     }
 }

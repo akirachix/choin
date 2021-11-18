@@ -22,6 +22,7 @@
                     <button id="delete">Delete all</button>
                 <span>{% for notification in user.notifications.unread %}</span>
                 <div class="btns">
+                    
                     <p>You have a new message from <b>{{ notification.actor.username }}
                         <span class="text-muted">{{ notification.timesince }} ago</span></p><br> {{ notification.description |linebreaksbr }}
                 </div>
@@ -100,6 +101,19 @@
             <h3 id="proff">Latest redeem
             </h3>
             <div class="card-2">
+                
+               
+                    <div class="column">
+                        <img id="image-reward" alt="redeemable-item" src="{{redeems.product.image.url}}">
+                        <p>{{redeems.product}}</p>
+                        <!-- <p>{{redeems.quantity}}</p> -->
+                        <p>{{redeems.date}}</p>
+                    </div>
+                    <!-- <div class="column">
+                        <img id="image-reward" alt="redeemable-item" src="{{item.image.url}}">
+                        <h3>{{item.item_name}}</h3>
+                    </div> -->
+           
         </div>
         </div>
         <div class="column2">
