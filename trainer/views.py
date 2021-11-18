@@ -273,7 +273,9 @@ def trainer_profile(request):
     return render(request, 'trainer_profile.html', args)
     
 def trainer_dashboard(request):
-    return render(request,"trainer_dashboard.html")
+   
+    students=Wallet.objects.all().order_by('-choinBalance')
+    return render(request,"trainer_dashboard.html", {'students':students})
 
 def view_trainer_profile(request,id):
     user_id=User.objects.get(id=id)
