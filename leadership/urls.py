@@ -12,6 +12,7 @@ urlpatterns =[
     path('reward_confirm/<int:id>/',reward_confirm,name='reward_confirm'),
     path('metrics/',addMetric,name='metrics'),
     path('delete_metric/<int:id>',delete_metric,name='delete'),
+    path('delete_item/<int:id>',delete_item,name='delete_item'),
     path('edit_metric/<int:id>',edit_metric,name='edit'),
     path('trans/',trans,name='trans'),
     path('search/',search_student,name='search_student'),

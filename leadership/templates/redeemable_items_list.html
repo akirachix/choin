@@ -48,6 +48,7 @@
             <td><img id="item-image" src="{{ item.image.url }}"></td>
             <td>{{ item.item_name }} </td>
             <td>{{ item.item_value }}</td>
+            <td><button id="delete"><a href="{% url 'delete_item' item.id %}">Delete</a></button></td>
         </tr>
         {% endfor %}
     </table>

@@ -201,7 +201,7 @@ def student_redeem(request):
         std = Student.objects.get(user = request.user)
         order = Redeem.objects.all().filter(student = std)
         the_balance=None
-        item =RedeemableItem.objects.get(id =1)
+        # item =RedeemableItem.objects.get(id =1)
     except ObjectDoesNotExist:
         return render(request,'forbidden.html')
     
@@ -219,7 +219,7 @@ def student_redeem(request):
                
 
                 red = Redeem.objects.all().filter(student = std)
-                i=Redeemed.objects.create (product = item ,quantity =ord.calculate_cart_items,total =ord.calculate_cart_total,student =std)
+                i=Redeemed.objects.create (quantity =ord.calculate_cart_items,total =ord.calculate_cart_total,student =std)
                 i.save()
                 print(i)
                 

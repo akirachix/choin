@@ -411,6 +411,11 @@ def delete_metric(request,id):
     metrics_delete.delete()
     return redirect("metrics")
 
+def delete_item(request,id):
+    item_delete = RedeemableItem.objects.get(id=id)
+    item_delete.delete()
+    return redirect("redeemable-items")    
+
 
 @login_required(login_url='login') 
 @group_required('Leadership')
