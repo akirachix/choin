@@ -29,7 +29,7 @@ function getToken(name) {
 var csrftoken = getToken('csrftoken');
 
 function updateUserOrder(productId, action) {
-    var url = "https://choin.herokuapp.com//student/update_item/"  
+    var url = "https://choin.herokuapp.com/student/update_item/"  
     fetch(url, {
             method: 'POST',
             headers: {
