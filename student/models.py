@@ -10,6 +10,8 @@ from leadership.models import RedeemableItem
 class Student(models.Model):
     user=models.OneToOneField(User,on_delete=CASCADE,null=True,related_name='userprofile')
     class_name = models.CharField(max_length=20, blank=True)
+
+    
     
 
 @receiver(post_save, sender=User)
@@ -24,7 +26,6 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
 class Redeem(models.Model):
     # cart
     #order
-   
     student=models.ForeignKey(Student,on_delete=CASCADE,null=True)
     date_of_purchase=models.DateField(null=True)
     transaction_id = models.CharField(max_length=200, null=True)

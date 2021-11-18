@@ -23,6 +23,22 @@ from urllib.parse import urlparse
 from django.http import JsonResponse, HttpResponse, HttpRequest
 from django.views.decorators.csrf import csrf_exempt #New
 from django.db.models import Q
+
+from django.contrib.auth.decorators import login_required, user_passes_test
+
+def group_required(Trainers):
+    """Requires user membership in at least one of the groups passed in."""
+    def in_groups(u):
+        if u.is_authenticated:
+            if u.groups.filter(name='Trainers').exists() :
+                return True
+            else:
+                return False
+        return redirect('login')
+    return user_passes_test(in_groups)
+
+# @login_required(login_url='login') 
+# @group_required('Trainers')
 class Blockchain:
     def __init__(self):
         self.chain = []
@@ -246,7 +262,7 @@ def trainer_profile(request):
             profile = profile_form.save(commit=False)
             profile.user = user
             profile.save()
-            return redirect('trainer-home')
+            return redirect('trainer_dashboard')
     else:
         profile_form = TrainerUserProfileForm(instance=request.user.traineruserprofile)
         user_form = TrainerUpdateProfileForm(instance=request.user)
@@ -259,5 +275,7 @@ def trainer_profile(request):
 def trainer_dashboard(request):
     return render(request,"trainer_dashboard.html")
 
-
+def view_trainer_profile(request,id):
+    user_id=User.objects.get(id=id)
+    return render(request,"view_trainer_profile.html",{'user_id':user_id})
 
